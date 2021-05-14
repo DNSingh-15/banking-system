@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#footer {
+  margin-top: auto;
+  background-color: #282a35;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 600px) {
+  #footer p {
+    padding: 0 10px;
+    font-size: 10px;
+  }
+}

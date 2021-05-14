@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/mydetails.css">
+</head>
+<body>
+    <nav>
+        <%- include ('navbar') -%>
+    </nav>
+    <div class="card-container">
+        <div class="card">
+            <div class="image-container">
+                <img src="./images/customer.png" alt="" class="customer-image">
+            </div>
+            <div class="info-container">
+                <div>
+                    <span class="info" id="key-name">Name : </span>
+                    <span id="name" class="values">Dooth nath singh</span>
+                </div>
+                <div>
+                    <span class="info" id="key-email">Email : </span>
+                    <span id="email" class="value">doothnath908@gmail.com</span>
+                </div>
+                <div>
+                    <span class="info" id="key-phone">Phone : </span>
+                    <span id="phone" class="value">7483799479</span>
+                </div>
+                <div>
+                    <span class="info" id="key-money">Current Balance : </span>
+                    <span id="money" class="value">40000 rs</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <%- include ('footer') -%>
+    </footer>
+</body>
+</html>

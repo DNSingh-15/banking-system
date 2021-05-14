@@ -1,0 +1,53 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/navbar.css">
+</head>
+<body>
+    <nav id="navbar">
+        <ul id="links">
+            <li class="link"><a class="subLink" href="/" style="font-weight:700;">ABC BANK</a></li>
+            <li class="link"><a class="subLink" href="/">Home</a></li>
+            <li class="link"><a class="subLink" href="/customers" onclick="getAllCustomers()">Customers</a></li>
+            <li class="link"><a class="subLink" href="/about">About</a></li>
+            <li class="link"><a class="subLink" href="/contact">Conctact us</a></li>
+            <div class="humberger" onclick="openMenu()">
+                <div class="stick"></div>
+                <div class="stick"></div>
+                <div class="stick"></div>
+            </div>
+        </ul>
+    </nav>
+    <script>
+        let menuOpen = false;
+        function openMenu(){
+            const navbarLinks = document.getElementById("links");
+            const link = document.querySelector(".link");
+            const humberger = document.querySelector(".humberger");
+            const subLinks = document.querySelectorAll(".subLink");
+            if(menuOpen){
+                navbarLinks.style.display = "";
+                navbarLinks.style.flexDirection = "";
+                navbarLinks.style.height = "";
+                humberger.style.marginTop = "";
+                link.style.marginTop = "";
+                subLinks.forEach(element => {
+                    element.style.display = "";
+                });
+                menuOpen = false;
+            }
+            else{
+                humberger.style.marginTop = "10px";
+                link.style.marginTop = "50px";
+                navbarLinks.style.display = "flex";
+                navbarLinks.style.flexDirection = "column";
+                navbarLinks.style.height = "auto";
+                subLinks.forEach(element => {
+                    element.style.display = "inline-block";
+                });
+                menuOpen = true;
+            }
+        }
+    </script>
+</body>
+</html>

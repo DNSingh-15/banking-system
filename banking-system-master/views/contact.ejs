@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC BANK || contact</title>
+    <link rel="stylesheet" href="./css/contact.css">
+</head>
+
+<body>
+    <nav>
+        <%- include ('navbar') -%>
+    </nav>
+    <div class="contact-form-container">
+        <form id="contact-form" action="" method="post">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div>
+                <label for="discription">Discription</label>
+            </div>
+            <textarea name="discription" id="discription" cols="30" rows="10" required></textarea>
+            <button id="btn" type="submit">Submit</button>
+        </form>
+    </div>
+    <footer>
+        <%- include ('footer') -%>
+    </footer>
+    <script>
+        const contact_form = document.getElementById("contact-form");
+        contact_form.addEventListener("submit",(e)=>{
+            e.preventDefault();
+            const div = document.createElement("div");
+            const message = document.createElement("p");
+            const image = document.createElement("img");
+            message.innerText = "Successfully submitted";
+            div.id = "success-message";
+            message.id = "message";
+            image.id = "success-image";
+            image.src = "./images/success.gif";
+            div.appendChild(message);
+            div.appendChild(image);
+            contact_form.innerHTML = "";
+            contact_form.appendChild(div);
+            // setTimeout(() => {
+            //     location.reload();
+            // }, 30000);
+        });
+    </script>
+</body>
+
+</html>

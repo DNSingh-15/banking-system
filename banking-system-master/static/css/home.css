@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+}
+html{
+  height: 100%;
+}
+
+body{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0faf7;
+}
+.greet {
+  background-color: #f0faf7;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 25px;
+}
+.greet img {
+  width: 50%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.container {
+  padding: 2rem;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.card {
+  text-align: center;
+  background-color:#ffffff;
+  border-radius: 8px;
+  height: 200px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card p{
+    margin-top: 5px;
+}
+
+.card img{
+    width: 100px;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+#image1{
+    margin: 30px;
+}
+
+#image2{
+    margin: 26px 0;
+}
+
+#image3{
+    margin: 27px 0;
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 25px;
+    background-color: #275efe;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    filter: drop-shadow(0 2px 8px rgba(39, 94, 254, 0.32));
+    transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.btn:hover{
+    border: 3px solid #8daaff;
+}
+
+footer{
+  margin-top: auto;
+}

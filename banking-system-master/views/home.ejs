@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Bank</title>
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+<body>
+    <nav>
+        <%- include ('navbar') -%>
+    </nav>
+    <div class="greet">
+        <h3>Welcome to ABC BANK</h3>
+        <img src="./images/bank.jpg" alt="bank logo">
+    </div>
+    <div class="container">
+        <div class="card"><p>Open Account</p>
+            <img id="image1" src="./images/account.png" alt="">
+            <form action="/openaccount" method="get">
+                <button class="btn">Open</button>
+            </form>
+        </div>
+        <div class="card"><p>Transfer Money</p>
+            <img id="image2" src="./images/money.jpg" alt="">
+            <form action="/transfer" method="get">
+                <button class="btn">Transfer</button>
+            </form>
+        </div>
+        <div class="card"><p>View History</p>
+            <img id="image3" src="./images/history.png" alt="">
+            <form action="/history" method="get">
+                <button class="btn">History</button>
+            </form>
+        </div>
+        <div class="card"><p>My Details</p>
+            <img id="image4" src="./images/details.png" alt="">
+            <form action="/mydetails" method="get">
+                <button class="btn">Details</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <%- include ('footer') -%>
+    </footer>
+</body>
+</html>
